@@ -20,7 +20,7 @@ public class Dijkstra {
         ArrayList<String> vertices = graph.giveVertices();
         HashMap<String, Integer> weights = new HashMap<>();
         HashMap<String, String> done = new HashMap<>();
-        PriorityQueue<Edge> queue = new PriorityQueue();
+        PriorityQueue<Edge> queue = new PriorityQueue<>(new Compare());
         if (!graph.giveVertices().contains(start) || !graph.giveVertices().contains(target)) {
             return "";
         }
